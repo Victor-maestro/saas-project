@@ -1,0 +1,131 @@
+@import 'vars';
+@import 'mixins';
+
+
+::placeholder {
+  color: #666;
+}
+  
+::selection {
+  background-color: $accent;
+  color: #fff;
+}
+  
+html {
+  overflow-x: hidden;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*, ::before, ::after {
+  box-sizing: inherit;
+}
+  
+body{
+  position: relative;
+  min-width: 360px;
+  overflow: hidden;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: $font-default;
+  line-height: 1.4;
+  color: $text;
+  
+  input, textarea {
+    border: #666 1px solid;
+    outline: none;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+  
+.btn {
+  display: block;
+  padding: 15px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: uppercase;
+  background-color: $accent;
+  border: none;
+  border-radius: 30px;
+  transition: $slowdown;
+  cursor: pointer;
+  
+  &:hover {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: lighten($accent, 10%);
+    box-shadow: 0 2px 9px 3px rgba(0, 0, 0, 0.2);
+  }
+}
+   
+h1, h2, h3, h4 {
+  margin-top: 0;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+p {
+  margin-top: 0;
+}
+  
+.title-text {
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+  line-height: 1.2;
+}
+  
+.text-nowrap {
+  white-space: nowrap;
+}
+  
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @include desktop {
+    max-width: 960px;
+  }
+
+  @include laptop {
+    max-width: 760px;
+    padding: 0 10px;
+  }
+
+  @include tablets {
+    max-width: 540px;
+  }
+
+  @include phones {
+    max-width: 320px;
+  }
+}
+
+/* section */
+/* section */
+/* section */
+
+
+/* footer */

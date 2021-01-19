@@ -1,0 +1,39 @@
+@import 'vars';
+
+
+// ≥1200px
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+   
+}
+
+
+// ≥992px
+@media screen and (max-width: 992px) {
+  .container {
+    max-width: 760px;
+    padding: 0 15px;
+  }
+
+}
+  
+
+// ≥768px
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 540px;
+    padding: 0 10px;
+  }
+
+} 
+
+  
+// ≥576px
+@media screen and (max-width: 576px) {
+  .container {
+    max-width: 320px;
+  }
+
+}
