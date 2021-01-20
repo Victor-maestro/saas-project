@@ -1,3 +1,22 @@
 header.header
-  .container
-    
+  .header__line
+    .logo.header__logo
+      span lite.page
+    nav.menu.header__menu
+      ul.menu__list
+        li.menu__item
+          a.link.menu__link(href="/") CRM
+        li.menu__item 
+          a.link.menu__link(href="/") Мои сайты
+        li.menu__item 
+          a.link.menu__link(href="/") Каталог
+        li.menu__item 
+          a.link.menu__link(href="/") Тарифы
+        li.menu__item 
+          a.link.menu__link(href="/") Блог
+    .header__block
+      a.link.link_help(href="/") Помощь
+      .user
+        a.user__link(href="/")
+          +image('', 'avatar', 'Фото пользователя', 'Пользователь', 'jpg')(class="user__avatar")
+      

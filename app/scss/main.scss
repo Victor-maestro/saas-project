@@ -21,7 +21,7 @@ html {
   box-sizing: inherit;
 }
   
-body{
+body {
   position: relative;
   min-width: 360px;
   overflow: hidden;
@@ -30,6 +30,7 @@ body{
   font-family: $font-default;
   line-height: 1.4;
   color: $text;
+  background-color: #E5E5E5;
   
   input, textarea {
     border: #666 1px solid;
@@ -123,9 +124,96 @@ p {
   }
 }
 
-/* section */
-/* section */
-/* section */
+/* header */
+.header {
+  padding: 10px 40px;
+  background-color: #ffffff;
+
+  &__line {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+  }
+
+  &__menu {
+    margin-left: auto;
+  }
+
+  &__block {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: 60px;
+  }
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.menu {
+  &__list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    @include lst;
+
+  }
+  &__item {
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 2px;
+    font-weight: 700;
+    font-size: 15px;
+    color: $text;
+    text-decoration: none;
+  }
+}
+
+.link {
+  font-weight: 700;
+  color: $text;
+  text-decoration: none;
+  transition: $slowdown;
+
+  &_help {
+    
+    font-size: 15px;
+  }
+
+  &:hover {
+    color: $accent;
+  }
+}
+
+.user {
+  margin-left: 24px;
+
+  &__link {
+    display: block;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    background-color: #C4C4C4;
+    border-radius: 50%;
+  }
+}
+/* aside */
+
+/* access */
+
 
 
 /* footer */

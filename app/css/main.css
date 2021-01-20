@@ -1,71 +1,3 @@
-@font-face {
-  font-family: Roboto-D;
-  font-weight: 700;
-  font-style: normal;
-  src: url(../fonts/Roboto-Bold.eot);
-  src: url(../fonts/Roboto-Bold.eot?#iefix) format("embedded-opentype"),url(../fonts/Roboto-Bold.woff) format("woff"),url(../fonts/Roboto-Bold.woff2) format("woff2");
-  font-display: swap
-}
-@font-face {
-  font-family: Roboto-D;
-  font-weight: 400;
-  font-style: normal;
-  src: url(../fonts/Roboto-Regular.eot);
-  src: url(../fonts/Roboto-Regular.eot?#iefix) format("embedded-opentype"),url(../fonts/Roboto-Regular.woff) format("woff"),url(../fonts/Roboto-Regular.woff2) format("woff2");
-  font-display: swap
-}
-@font-face {
-  font-family: Roboto-D;
-  font-weight: 400;
-  font-style: italic;
-  src: url(../fonts/Roboto-Italic.eot);
-  src: url(../fonts/Roboto-Italic.eot?#iefix) format("embedded-opentype"),url(../fonts/Roboto-Italic.woff) format("woff"),url(../fonts/Roboto-Italic.woff2) format("woff2");
-  font-display: swap
-}
-@-webkit-keyframes zoom {
-  0% {
-    -webkit-transform: scale(1);
-    transform: scale(1)
-  }
-  14% {
-    -webkit-transform: scale(1.25);
-    transform: scale(1.25)
-  }
-  28% {
-    -webkit-transform: scale(1);
-    transform: scale(1)
-  }
-  42% {
-    -webkit-transform: scale(1.25);
-    transform: scale(1.25)
-  }
-  70% {
-    -webkit-transform: scale(1);
-    transform: scale(1)
-  }
-}
-@keyframes zoom {
-  0% {
-    -webkit-transform: scale(1);
-    transform: scale(1)
-  }
-  14% {
-    -webkit-transform: scale(1.25);
-    transform: scale(1.25)
-  }
-  28% {
-    -webkit-transform: scale(1);
-    transform: scale(1)
-  }
-  42% {
-    -webkit-transform: scale(1.25);
-    transform: scale(1.25)
-  }
-  70% {
-    -webkit-transform: scale(1);
-    transform: scale(1)
-  }
-}
 ::-webkit-input-placeholder {
   color: #666
 }
@@ -82,17 +14,18 @@
   color: #666
 }
 ::-moz-selection {
-  background-color: red;
+  background-color: #4d1bc1;
   color: #fff
 }
 ::selection {
-  background-color: red;
+  background-color: #4d1bc1;
   color: #fff
 }
 html {
   overflow-x: hidden;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box
+  box-sizing: border-box;
+  scroll-behavior: smooth
 }
 *,
 ::after,
@@ -102,13 +35,14 @@ html {
 }
 body {
   position: relative;
-  min-width: 320px;
+  min-width: 360px;
   overflow: hidden;
   font-weight: 400;
   font-size: 16px;
-  font-family: Roboto-D,Arial,Helvetica,sans-serif;
+  font-family: Roboto,Arial,Helvetica,sans-serif;
   line-height: 1.4;
-  color: #000
+  color: #1c1e20;
+  background-color: #e5e5e5
 }
 body input,
 body textarea {
@@ -124,49 +58,37 @@ b,
 strong {
   font-weight: 700
 }
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0
+}
 .btn {
+  display: block;
   padding: 15px;
   font-weight: 700;
   font-size: 18px;
   color: #fff;
   text-transform: uppercase;
-  background-color: red;
+  background-color: #4d1bc1;
   border: none;
   border-radius: 30px;
-  -webkit-transition: all .3s ease;
-  -o-transition: all .3s ease;
-  transition: all .3s ease;
+  -webkit-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
   cursor: pointer
 }
 .btn:hover {
   color: #fff;
   text-decoration: none;
-  background-color: #f33;
+  background-color: #642de2;
   -webkit-box-shadow: 0 2px 9px 3px rgba(0,0,0,.2);
   box-shadow: 0 2px 9px 3px rgba(0,0,0,.2)
-}
-.link-btn {
-  display: block;
-  width: 250px;
-  margin: 0 auto
-}
-.link-btn:hover {
-  color: #fff;
-  text-decoration: none
-}
-.no-btn {
-  padding: 0;
-  background: 0 0;
-  border: none
-}
-.no-btn:active,
-.no-btn:focus {
-  outline: 0
-}
-.lst {
-  margin: 0;
-  padding: 0;
-  list-style: none
 }
 h1,
 h2,
@@ -184,25 +106,14 @@ p {
   font-weight: 700;
   font-size: 24px;
   text-align: center;
-  text-transform: uppercase;
   line-height: 1.2
-}
-.text-accent {
-  color: red
-}
-.text-black {
-  font-weight: 900
-}
-.text-up {
-  text-transform: uppercase
 }
 .text-nowrap {
   white-space: nowrap
 }
 .container {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px
+  margin: 0 auto
 }
 @media screen and (max-width:1200px) {
   .container {
@@ -212,18 +123,107 @@ p {
 @media screen and (max-width:992px) {
   .container {
     max-width: 760px;
-    padding: 0 15px
+    padding: 0 10px
   }
 }
 @media screen and (max-width:768px) {
   .container {
-    max-width: 540px;
-    padding: 0 10px
+    max-width: 540px
   }
 }
 @media screen and (max-width:576px) {
   .container {
-    max-width: 100%
+    max-width: 320px
   }
+}
+.header {
+  padding: 10px 40px;
+  background-color: #fff
+}
+.header__line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between
+}
+.header__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center
+}
+.header__menu {
+  margin-left: auto
+}
+.header__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 60px
+}
+.logo {
+  font-weight: 700;
+  font-size: 20px
+}
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none
+}
+.menu__item:not(:last-child) {
+  margin-right: 20px
+}
+.menu__link {
+  display: block;
+  padding: 2px;
+  font-weight: 700;
+  font-size: 15px;
+  color: #1c1e20;
+  text-decoration: none
+}
+.link {
+  font-weight: 700;
+  color: #1c1e20;
+  text-decoration: none;
+  -webkit-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease
+}
+.link_help {
+  font-size: 15px
+}
+.link:hover {
+  color: #4d1bc1
+}
+.user {
+  margin-left: 24px
+}
+.user__link {
+  display: block;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  background-color: #c4c4c4;
+  border-radius: 50%
 }
 /*# sourceMappingURL=main.css.map */
