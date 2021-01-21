@@ -125,7 +125,7 @@ p {
 
 /* header */
 .header {
-  padding: 10px 40px;
+  padding: 0 40px;
   background-color: $white;
   border-bottom: 1px solid #C7C7C7;
 
@@ -160,7 +160,7 @@ p {
 
   @include tablets {
     position: relative;
-    padding: 10px 16px;
+    padding: 0 16px;
 
     &__block {
       display: none;
@@ -330,7 +330,7 @@ p {
 
 .toggle-menu {
   position: absolute;
-  top: 20px;
+  top: 10px;
   right: 20px;
   z-index: 100;
   display: none;
@@ -652,7 +652,7 @@ p {
   }
 
   @include tablets {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 
     &__wrap {
       padding: 16px;

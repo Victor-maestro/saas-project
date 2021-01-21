@@ -136,7 +136,7 @@ p {
   }
 }
 .header {
-  padding: 10px 40px;
+  padding: 0 40px;
   background-color: #fff;
   border-bottom: 1px solid #c7c7c7
 }
@@ -187,7 +187,7 @@ p {
 @media screen and (max-width:768px) {
   .header {
     position: relative;
-    padding: 10px 16px
+    padding: 0 16px
   }
   .header__block {
     display: none;
@@ -368,7 +368,7 @@ p {
 }
 .toggle-menu {
   position: absolute;
-  top: 20px;
+  top: 10px;
   right: 20px;
   z-index: 100;
   display: none;
@@ -703,7 +703,7 @@ p {
 }
 @media screen and (max-width:768px) {
   .access {
-    margin-bottom: 20px
+    margin-bottom: 40px
   }
   .access__wrap {
     padding: 16px
