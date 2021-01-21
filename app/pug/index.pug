@@ -8,8 +8,11 @@ html
   body
     include blocks/header.pug
 
-    .main-wrap
-      .container
+    .container
+      .wrapper
+        include blocks/control.pug
+        include blocks/top.pug
+      .wrapper
         include blocks/aside.pug
         include blocks/access.pug
 

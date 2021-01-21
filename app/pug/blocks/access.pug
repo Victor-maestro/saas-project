@@ -1,2 +1,30 @@
 section.access
-  
+  .access__wrap
+    h3.access__title Настройка доступа к сайту
+    p.access__note Контролируйте, кому доступен ваш сайт
+    .access__inner
+      .access__block.access__block_note
+        p.access__site Интернет сайт
+      .access__block.access__block_radio
+        .access__radio.radio
+          input.radio__input(id="publish" name="publish" type="radio" value="Опубликовать сайт")
+          label.radio__label(for="publish") Опубликовать сайт
+          span.radio__text Доступно при оплаченном тарифном плане<br> и купленном домене
+          .radio__show-field.show-field
+            label.show-field__label(for="pass") Введите пароль
+            input.show-field__input(id="pass" name="pass" type="password" placeholder="******")
+        .access__radio.radio
+          input.radio__input(id="protected" name="publish" type="radio" value="Опубликовать сайт")
+          label.radio__label(for="protected") Сайт защищен паролем
+          span.radio__text Сайт увидит только тот, у кого есть пароль
+          .radio__show-field.show-field
+            label.show-field__label(for="pass") Введите пароль
+            input.show-field__input(id="pass" name="pass" type="password" placeholder="******")
+        .access__radio.radio
+          input.radio__input(id="private" name="publish" type="radio" value="Опубликовать сайт" checked)
+          label.radio__label(for="private") Приватный сайт
+          span.radio__text Только авторы и владелец сайта смогут увидеть сайт
+
+    .access__btns
+      button.access__btn.access__btn_invers Отменить
+      button.access__btn Сохранить

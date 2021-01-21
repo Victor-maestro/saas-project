@@ -47,16 +47,28 @@
       </div>
     </div>
   </header>
-  <div class="main-wrap">
-    <div class="container">
-      <aside class="aside">
-        <button class="aside__btn">
+  <div class="container">
+    <div class="wrapper">
+      <div class="control">
+        <button class="control__btn">
           <span>
             <svg>
               <use xlink:href="./img/sprite.svg#arrow"></use>
             </svg>
           </span>Назад
         </button>
+      </div>
+      <div class="top">
+        <div class="bread-crumbs bread-crumbs">
+          <a class="bread-crumbs__link" href="/">Главная</a>
+          <a class="bread-crumbs__link" href="/">Настройки сайта</a>
+          <a class="bread-crumbs__link" href="/">Доступ к сайту</a>
+        </div>
+        <h2 class="title-text">Доступ к сайту</h2>
+      </div>
+    </div>
+    <div class="wrapper">
+      <aside class="aside">
         <div class="aside__wrap">
           <ul class="aside__list">
             <li class="aside__item">
@@ -69,7 +81,7 @@
               <a class="link aside__link" href="/">Доступ к сайту</a>
             </li>
             <li class="aside__item">
-              <a class="link aside__link" href="/">Доступ к сайту</a>
+              <a class="link aside__link aside__link_active" href="/">Доступ к сайту</a>
             </li>
             <li class="aside__item">
               <a class="link aside__link" href="/">Доступ к сайту</a>
@@ -98,7 +110,47 @@
           </ul>
         </div>
       </aside>
-      <section class="access"></section>
+      <section class="access">
+        <div class="access__wrap">
+          <h3 class="access__title">Настройка доступа к сайту</h3>
+          <p class="access__note">Контролируйте, кому доступен ваш сайт</p>
+          <div class="access__inner">
+            <div class="access__block access__block_note">
+              <p class="access__site">Интернет сайт</p>
+            </div>
+            <div class="access__block access__block_radio">
+              <div class="access__radio radio">
+                <input class="radio__input" id="publish" name="publish" type="radio" value="Опубликовать сайт">
+                <label class="radio__label" for="publish">Опубликовать сайт</label>
+                <span class="radio__text">Доступно при оплаченном тарифном плане
+                  <br> и купленном домене</span>
+                <div class="radio__show-field show-field">
+                  <label class="show-field__label" for="pass">Введите пароль</label>
+                  <input class="show-field__input" id="pass" name="pass" type="password" placeholder="******">
+                </div>
+              </div>
+              <div class="access__radio radio">
+                <input class="radio__input" id="protected" name="publish" type="radio" value="Опубликовать сайт">
+                <label class="radio__label" for="protected">Сайт защищен паролем</label>
+                <span class="radio__text">Сайт увидит только тот, у кого есть пароль</span>
+                <div class="radio__show-field show-field">
+                  <label class="show-field__label" for="pass">Введите пароль</label>
+                  <input class="show-field__input" id="pass" name="pass" type="password" placeholder="******">
+                </div>
+              </div>
+              <div class="access__radio radio">
+                <input class="radio__input" id="private" name="publish" type="radio" value="Опубликовать сайт" checked>
+                <label class="radio__label" for="private">Приватный сайт</label>
+                <span class="radio__text">Только авторы и владелец сайта смогут увидеть сайт</span>
+              </div>
+            </div>
+          </div>
+          <div class="access__btns">
+            <button class="access__btn access__btn_invers">Отменить</button>
+            <button class="access__btn">Сохранить</button>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
   <script src="./js/scripts.min.js"></script>
