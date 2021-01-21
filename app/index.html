@@ -18,34 +18,47 @@
       <div class="logo header__logo">
         <span>lite.page</span>
       </div>
-      <nav class="menu header__menu">
-        <ul class="menu__list">
-          <li class="menu__item">
-            <a class="link menu__link" href="/">CRM</a>
-          </li>
-          <li class="menu__item">
-            <a class="link menu__link" href="/">Мои сайты</a>
-          </li>
-          <li class="menu__item">
-            <a class="link menu__link" href="/">Каталог</a>
-          </li>
-          <li class="menu__item">
-            <a class="link menu__link" href="/">Тарифы</a>
-          </li>
-          <li class="menu__item">
-            <a class="link menu__link" href="/">Блог</a>
-          </li>
-        </ul>
-      </nav>
       <div class="header__block">
-        <a class="link link_help" href="/">Помощь</a>
-        <div class="user">
-          <a class="user__link" href="/">
-            <img class="user__avatar" src="./img/avatar.jpg" srcset="./img/avatar@2x.jpg 2x" alt="Фото пользователя" title="Пользователь" />
-          </a>
+        <div class="header__inner">
+          <nav class="menu header__menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="link menu__link" href="/">CRM</a>
+              </li>
+              <li class="menu__item">
+                <a class="link menu__link" href="/">Мои сайты</a>
+              </li>
+              <li class="menu__item">
+                <a class="link menu__link" href="/">Каталог</a>
+              </li>
+              <li class="menu__item">
+                <a class="link menu__link" href="/">Тарифы</a>
+              </li>
+              <li class="menu__item">
+                <a class="link menu__link" href="/">Блог</a>
+              </li>
+              <li class="menu__item">
+                <a class="link menu__link" href="/">Помощь</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__user user">
+            <div class="user__block">
+              <span class="user__foto">
+                <img src="./img/avatar.jpg" srcset="./img/avatar@2x.jpg 2x" alt="Фото пользователя" title="Пользователь" />
+              </span>
+              <div class="user__info">
+                <span class="user__name">Артем Городецкий</span>
+                <button class="user__exit">Выйти</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+    <button class="toggle-menu" aria-label="Кнопка меню">
+      <span></span>
+    </button>
   </header>
   <div class="container">
     <div class="wrapper">
@@ -67,7 +80,7 @@
         <h2 class="title-text">Доступ к сайту</h2>
       </div>
     </div>
-    <div class="wrapper">
+    <div class="wrapper wrapper__revers">
       <aside class="aside">
         <div class="aside__wrap">
           <ul class="aside__list">
